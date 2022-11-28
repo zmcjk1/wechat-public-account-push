@@ -1,57 +1,27 @@
-/* eslint-disable */
-const TEMPLATE_CONFIG = [
-  {
-    id: '0001',
-    title: '亲爱的, 早上好',
-    desc: `
-      **{{date.DATA}}**
-      
-      下个休息日：{{holidaytts.DATA}}
-      
-      ---
-      
-      城市：{{city.DATA}}
-      
-      天气：{{weather.DATA}}
-      
-      气温(最高/最低):{{max_temperature.DATA}} / {{min_temperature.DATA}}
-      
-      风向: {{wind_direction.DATA}}
-      
-      风级: {{wind_scale.DATA}}
-      
-      {{comprehensive_horoscope.DATA}}
-      
-      ---
-      
-      今天是我们相识的第{{love_day.DATA}}天
-      
-      {{birthday_message.DATA}}
-      
-      ---
-      
-      {{moment_copyrighting.DATA}}
-      
-      {{poetry_title.DATA}} {{poetry_content.DATA}}
-    `
-  },
-  {
-    id: '0002',
-    title: '推送完成提醒',
-    desc: `
-      服务器信息：{{post_time_zone.DATA}} {{post_time.DATA}}
-      
-      ---
-      
-      共推送 {{need_post_num.DATA}} 人
-      
-      成功: {{success_post_num.DATA}} | 失败: {{fail_post_num.DATA}}
-      
-      成功用户: {{success_post_ids.DATA}}
-      
-      失败用户: {{fail_post_ids.DATA}}
-    `
-  },
-]
-
-module.exports = TEMPLATE_CONFIG
+{
+# 公众号配置
+# 公众号appId
+"app_id": "wx31223b8d43256d8a",
+# 公众号appSecret
+"app_secret": "d1005da0b0887f8c1bb065074f9ead55",
+# 模板消息id
+"template_id": "Y4uWdX_Yb_5GnB2FAQEjotfvgE7_RzhG-7ifGiSQitY",
+# 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
+"user": ["o7KSs5yJOVG8H7jkeLm90uqeacGs", "o7KSs53pjtqvvNSsUOIJ8jBFgnXU"],
+ 
+# 信息配置
+# 和风天气apikey
+"weather_key": "75ba48938a164e9cb8f69a38deddd12d",
+# 所在地区，可为省，城市，区，县，同时支持国外城市，例如伦敦
+"region": "太原市",
+# 生日1，修改名字为对应需要显示的名字，如果生日为农历，在最前面加上r即可
+"birthday1": {"name": "许乖乖", "birthday": "1995-05-06"},
+# 生日2
+"birthday2": {"name": "张憨憨", "birthday": "1996-08-01"},
+# 在一起的日子，格式同上，暂不不支持农历
+"love_date": "2021-11-10",
+# 金句中文，如果设置了，则会显示这里的，如果为空，默认会读取金山的每日金句
+"note_ch": "",
+# 金句英文
+"note_en": ""
+}
